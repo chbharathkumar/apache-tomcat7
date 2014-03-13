@@ -19,8 +19,7 @@ echo "========================================================================="
 tm=`pwd`
 yum -y install httpd
 yum -y install java-1.7.0-openjdk lsof unzip
-tar -xvf apache-tomcat-7.0.52.tar.gz
-mv apache-tomcat-7.0.52 /var/www/html/tomcat7
+mv apache-tomcat-7 /var/www/html/tomcat7
 mv tomcat7 /etc/init.d/tomcat7
 useradd -d /var/www/html/tomcat7/ tomcat
 chown -R tomcat. /var/www/html/tomcat7/
@@ -84,7 +83,9 @@ echo "=                                                                       ="
 echo "=         Chuong Trinh Da Duoc Cai Dat Thanh Cong                       ="
 echo "=            De Chay Lai Chuong Trinh hay Go                            ="
 echo "=             Apache Tomcat Version 7.0.52                              ="
-echo "=              service tomcat7 restart                              ="
+echo "=       Thu Muc Apache Tomcat7: /var/www/html/tomcat7                   ="
+echo "=            Default manager admin: admin/123456                        ="
+echo "=              service tomcat7 restart                                  ="
 echo "=                      HSP Viet Nam                                     ="
 echo "=                                                                       ="
 echo "=                                                                       ="
