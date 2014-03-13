@@ -22,7 +22,7 @@ apt-get -y install openjdk-7-jdk
 mkdir -p /var/lock/subsys
 touch /var/lock/subsys/tomcat7
 mv apache-tomcat-7 /var/www/tomcat7
-mv tomcat7_ubuntu.sh /etc/init.d/tomcat7
+mv tomcat7_ubuntu /etc/init.d/tomcat7
 useradd -d /var/www/tomcat7/ tomcat
 chown -R tomcat. /var/www/tomcat7/
 chmod -R 0755 /var/www/tomcat7/
