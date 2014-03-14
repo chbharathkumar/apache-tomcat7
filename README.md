@@ -1,5 +1,3 @@
-Hướng dẫn cài đặt Apache Tomcat7 trên CentOS 6
-==============================================
 #Cài đặt trên CentOS 6
 Bước 1:
 yum install git -y
