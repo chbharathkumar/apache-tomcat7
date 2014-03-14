@@ -21,16 +21,18 @@ apt-get -y install apache2
 apt-get -y install openjdk-7-jdk
 mkdir -p /var/lock/subsys
 touch /var/lock/subsys/tomcat7
-mv apache-tomcat-7 /var/www/tomcat7
+tar -xvf apache-tomcat-7.0.52.tar.gz
+mv apache-tomcat-7.0.52 /var/www/tomcat7
 mv tomcat7_ubuntu /etc/init.d/tomcat7
 useradd -d /var/www/tomcat7/ tomcat
 chown -R tomcat. /var/www/tomcat7/
 chmod -R 0755 /var/www/tomcat7/
 chmod 755 /etc/init.d/tomcat7
 service tomcat7 start
-chkconfig --add tomcat7
-chkconfig tomcat7 on
-ufw enable
+ufw enable <<eof
+y
+
+eof
 	iptables -P INPUT ACCEPT
 	iptables -P FORWARD ACCEPT
 	iptables -P OUTPUT ACCEPT

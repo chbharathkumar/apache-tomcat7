@@ -19,7 +19,8 @@ echo "========================================================================="
 tm=`pwd`
 yum -y install httpd
 yum -y install java-1.7.0-openjdk lsof unzip
-mv apache-tomcat-7 /var/www/html/tomcat7
+tar -xvf apache-tomcat-7.0.52.tar.gz
+mv apache-tomcat-7.0.52 /var/www/html/tomcat7
 mv tomcat7 /etc/init.d/tomcat7
 useradd -d /var/www/html/tomcat7/ tomcat
 chown -R tomcat. /var/www/html/tomcat7/
